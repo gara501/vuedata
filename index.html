@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VueData</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Html">
+  <meta name="author" content="Bro">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="node_modules/vue/dist/vue.js"></script>
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-on:input="changeTitle">
+    <p>{{ title }}</p>
+    <a v-bind:href="soul4fit">Soul4fit</a>
+    <p v-html="finishedLink"></p>
+    <button v-on:click="counter++">Click me</button>
+    <button v-on:click="counter--">Click me</button>
+    <button v-on:click="secondCounter++">Second</button>
+    <p>Second {{secondCounter}}</p>
+    <p>{{counter}}</p>
+    <p>{{result()}}</p>
+    <p>{{output}}</p>
+    <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}
+
+      <span v-on:mousemove.stop="">DEAD SPOT</span>
+      <input type="text" v-on:keyup.enter="alertMe">
+
+    </p>
+    <button @click="counter--">Otro Counter</button>
+    <input type="text" v-model="name">
+    {{name}}
+    <div class="demo" @click="attachRed = !attachRed" :class="divCls"></div>
+    <div class="demo"></div>
+    <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+    <input type="text" v-model="color">
+    <input type="text" v-model="width">
+    <p>Conditionals</p>
+    <p v-if="show">You see me</p>
+    <p v-else>You not see me</p>
+    <template v-if="show">
+      <h1>HI!</h1>
+      <p>You not see me</p>
+    </template>
+    <button @click="show = !show">Show</button>
+    <ul>
+      <li v-for="(person, i) in persons">
+        {{ person.name }} ({{ i }})
+      </li>
+    </ul>
+    <template v-for="(person, i) in persons">
+      <h1>{{ person.name}}</h1>
+      <p>{{person.age}}</p>
+    </template>
+  </div>
+  <script src="js/data.js"></script>
+</body>
+</html>
+

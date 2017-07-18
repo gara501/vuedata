@@ -1,0 +1,25 @@
+{
+  "name": "vueapp",
+  "version": "1.0.0",
+  "description": "Vue Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gara501/vuedata.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "gonzalo andres ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gara501/vuedata/issues"
+  },
+  "homepage": "https://github.com/gara501/vuedata#readme",
+  "dependencies": {
+    "vue": "^2.4.1"
+  }
+}
